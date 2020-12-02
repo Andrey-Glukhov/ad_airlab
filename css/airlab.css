@@ -1,0 +1,135 @@
+body, html {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+}
+/*--------------------------------------------------------------
+global
+--------------------------------------------------------------*/
+/* input, textarea, select, a, button { outline: none; }
+input, textarea, select, a, button:focus { outline:none; }
+input, textarea, select, a, button:active { outline: none; }
+ul, li {list-style-type: none;} */
+
+
+/*--------------------------------------------------------------
+navigation
+--------------------------------------------------------------*/
+nav{
+position: fixed;
+top: auto;
+left: auto;
+width: 100%;
+min-height: 40px;
+z-index: 110;
+}
+.navbar-brand>img{
+  height: 70px;
+  width: auto;
+}
+#bs-example-navbar-collapse-1{
+  justify-content: center;
+}
+.nav-link{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+ul.navbar-nav{
+  width: 55% !important;
+  justify-content: space-between;
+}
+.menu-item.menu-item-has-children{
+  border-top: 1px solid #005657;
+  min-width: 70px;
+}
+.menu-item>a{
+  color: #005657;
+  font-size: 0.9rem;
+}
+.dropdown-menu.show{
+  border: none;
+}
+.dropdown-menu.show>li>a:hover{
+  background: none !important;
+}
+.dropdown-item{
+  padding-left: 0 !important;
+}
+/*--------------------------------------------------------------
+home page
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+timeline
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+single_project
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+about
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+contact
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+news
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+team
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+subscribe
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+publications
+--------------------------------------------------------------*/
+
+
+/*xs*/
+@media only screen and (max-width: 576px) {
+  ul.navbar-nav{
+    width: 100% !important;
+  }
+  .collapse.navbar-collapse{
+    margin-right: 0px;
+  }
+}
+/*sm*/
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  ul.navbar-nav{
+    width: 100% !important;
+  }
+  .collapse.navbar-collapse{
+    margin-right: 0px;
+  }
+}
+/*md*/
+@media screen and (min-width: 768px) and (max-width: 992px){
+  ul.navbar-nav{
+    width: 90% !important;
+  }
+  .collapse.navbar-collapse{
+    margin-right: 100px;
+  }
+}
+
+/*lg*/
+@media screen and (min-width: 992px)  {
+  ul.navbar-nav{
+    width: 55% !important;
+  }
+  .collapse.navbar-collapse{
+    margin-right: 0px;
+  }
+}
