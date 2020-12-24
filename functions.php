@@ -22,8 +22,11 @@ function airlab_script_enqueue(){
   wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js', array('jquery'), null, true );
   wp_enqueue_script( 'gsap-animation-js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', array('jquery', 'gsap-js'), null, true );
 
+	//Typed.js
+	wp_enqueue_script( 'typed-js', 'https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js');
 
-  wp_enqueue_script( 'airlab-js', get_template_directory_uri() . '/js/airlab.js', array('jquery', 'scroll-magic-js', 'gsap-js', 'bootstrap-js'), null, true );
+
+  wp_enqueue_script( 'airlab-js', get_template_directory_uri() . '/js/airlab.js', array('jquery', 'scroll-magic-js', 'gsap-js', 'typed-js', 'bootstrap-js'), null, true );
 
 
 }
