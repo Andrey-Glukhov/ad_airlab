@@ -62,7 +62,7 @@ ul.navbar-nav{
 }
 .menu-item>a{
   font-family: 'Connary-Fagen-Visby-CF-Light';
-  color: #9abd03;
+  color: #015556;
   font-size: 0.8rem;
 }
 .dropdown-menu.show{
@@ -306,9 +306,89 @@ meet team
   --------------------------------------------------------------*/
 
   /*--------------------------------------------------------------
-  publications
+  connect
   --------------------------------------------------------------*/
-
+  /*---------contact form----------*/
+.nf-form-fields-required, .ninja-forms-req-symbol{
+  display: none;
+}
+#nf-label-field-1, #nf-label-field-5, #nf-label-field-2, #nf-label-field-3{
+  font-family: 'Connary-Fagen-Visby-CF-Bold';
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+.form_background{
+  background-image: url("../img/PaperGreen-min.png");
+  background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+margin-top: 10vh;
+}
+#nf-form-title-1>h3{
+  padding-top: 50px;
+  text-align: center;
+  font-family: 'Connary-Fagen-Visby-CF-Bold';
+  font-size: 3rem;
+  color: #ffffff;
+}
+div.nf-form-content{
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+}
+.nf-field-element>.ninja-forms-field.nf-element{
+  background: none;
+  border-bottom: 1.5px solid #ffffff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.field-wrap.textbox-wrap.nf-fail.nf-error{
+  display: flex;
+  flex-direction: row;
+}
+div.nf-field-label{
+  height: fit-content;
+    margin-bottom: 0 !important;
+    align-self: flex-end;
+    border-bottom: 1px solid #ffffff;
+}
+.nf-field-element{
+  width: auto !important;
+}
+.nf-form-content .listselect-wrap .nf-field-element div, .nf-form-content input.ninja-forms-field, .nf-form-content select.ninja-forms-field:not([multiple]){
+  height: 30px !important;
+}
+.nf-form-content textarea.ninja-forms-field{
+  height: 120px !important;
+}
+#nf-field-3-wrap>.nf-field-label{
+  align-self: flex-start !important;
+}
+.nf-error.field-wrap .nf-field-element:after {
+  display: none;
+}
+.nf-field-element{
+  flex-grow: 1;
+}
+#nf-error-1>.nf-error-msg.nf-error-required-error, #nf-error-5>.nf-error-msg.nf-error-required-error, #nf-error-2>.nf-error-msg.nf-error-required-error, #nf-error-3>.nf-error-msg.nf-error-required-error{
+  position: absolute !important;
+  font-family: 'Connary-Fagen-Visby-CF-Light';
+  font-size: 0.8rem;
+  color: #ffffff !important;
+}
+#nf-form-errors-1{
+  display: none;
+}
+.nf-input-limit{
+  display: none !important;
+}
+.nf-pass.field-wrap .nf-field-element:after {
+  display: none;
+}
+#nf-field-4-wrap>.nf-field-element{
+display: flex;
+justify-content: center;
+}
 
   /*xs*/
   @media only screen and (max-width: 576px) {
