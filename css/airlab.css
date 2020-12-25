@@ -294,12 +294,25 @@ meet team
   .st_wraper{
     position: relative;
   }
-  .st_right{
+  .st_left{
     display: flex;
     flex-direction: column;
   }
-  .st_right>img{
+  .st_left>img{
     align-self: flex-end;
+  }
+  .student_data_wraper{
+    padding:10px 20%;
+  }
+  .st_name{
+    font-family: 'Connary-Fagen-Visby-CF-Bold';
+    font-size: 0.8rem;
+    color: #009a78;
+  }
+  .st_about>p{
+    font-family: 'Connary-Fagen-Visby-CF-Light';
+    font-size: 0.8rem;
+    color: #009a78;
   }
   /*--------------------------------------------------------------
   subscribe
@@ -322,7 +335,9 @@ meet team
   background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
-margin-top: 10vh;
+}
+.connect_row{
+  margin-top: 15vh;
 }
 #nf-form-title-1>h3{
   padding-top: 50px;
@@ -332,8 +347,8 @@ margin-top: 10vh;
   color: #ffffff;
 }
 div.nf-form-content{
-  padding-right: 20px !important;
-  padding-left: 20px !important;
+  padding-right: 40px !important;
+  padding-left: 40px !important;
 }
 .nf-field-element>.ninja-forms-field.nf-element{
   background: none;
@@ -350,7 +365,7 @@ div.nf-field-label{
   height: fit-content;
     margin-bottom: 0 !important;
     align-self: flex-end;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1.5px solid #ffffff;
 }
 .nf-field-element{
   width: auto !important;
@@ -388,6 +403,16 @@ div.nf-field-label{
 #nf-field-4-wrap>.nf-field-element{
 display: flex;
 justify-content: center;
+}
+.map{
+  padding: 0 0 0 40px;
+  align-items: center;
+  display: flex;
+}
+.map>img{
+  width: 100%;
+  height: auto;
+
 }
 
   /*xs*/
