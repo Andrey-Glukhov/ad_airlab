@@ -301,6 +301,40 @@ meet team
   .st_right>img{
     align-self: flex-end;
   }
+/*--------------------------------------------------------------
+  papers
+  --------------------------------------------------------------*/
+.paper_offset {
+  height: 10vh;
+}
+.paper-box {
+  transform-origin: top right;
+  transform: rotate(-5deg);
+  margin-bottom: 10px;
+}
+.paper_background  img {
+  width: 100%;
+  height: auto;
+}
+.paper_wrapper {
+  margin-top: 10vh;
+}
+.paper_heading {
+  position: absolute;
+  top: 50%;  
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.paper_board {
+  padding-right: 5%;
+  padding-top:5%
+}
+.paper_row {
+ 
+}
+.paper_link {
+  
+}
   /*--------------------------------------------------------------
   subscribe
   --------------------------------------------------------------*/
@@ -426,4 +460,12 @@ justify-content: center;
     .collapse.navbar-collapse{
       margin-right: 0px;
     }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
   }
