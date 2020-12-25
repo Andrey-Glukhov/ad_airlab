@@ -22,5 +22,9 @@ get_header(); ?>
       </div>
 
     </div>
+    <div></div>
 </div>
+<script>
+$('input').attr('autocomplete', 'off');
+</script>
 <?php get_footer(); ?>

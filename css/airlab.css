@@ -117,12 +117,15 @@ Franksie Page
 Founding Story
 --------------------------------------------------------------*/
 .slide {
-  width: 10vw;
+  font-family: 'Connary-Fagen-Visby-CF-Bold';
+  font-size: 1.2rem;
+  width: 3vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: #015556;
 }
 .half_slide{
   width: 10vw;
@@ -146,7 +149,6 @@ Founding Story
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
 }
-
 .outer-wrapper {
   width: 100vh;
   height: 100vw;
@@ -174,20 +176,29 @@ Founding Story
   background: none;
 }
 .title_slide{
-  margin-left: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 30vw;
 }
 .title_slide>h1{
+  font-family: 'Connary-Fagen-Visby-CF-Light';
   font-size: 4rem;
-  color: #005555;
+  color: #009a78;
   margin-top: 10vh;
 }
-.title_slide>img{
-  width: 100%;
-  height: auto;
+.title_slide>h1>.t_bold{
+  font-family: 'Connary-Fagen-Visby-CF-Bold';
+  font-size: 4rem;
+  color: #009a78;
+  margin-top: 10vh;
+}
+.about_section>p{
+  font-family: 'Connary-Fagen-Visby-CF-Light';
+  font-size: 1rem;
+  color: #009a78;
 }
 .half_slide.bottom{
   align-self: flex-end;
@@ -238,6 +249,17 @@ Founding Story
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.image_circle{
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .on_hover:hover>.outer_circle{
   border: 1px dashed #005555;
 }
@@ -254,6 +276,19 @@ Founding Story
 @keyframes rotation {
   0% {transform:rotate(0deg);}
   100% {transform:rotate(360deg);}
+}
+.pict_wraper{
+width: 60px;
+height: 60px;
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+}
+.pict_wraper.on_bottom{
+  margin-top: 50px;
+}
+.pict_wraper.on_top{
+  margin-bottom: 50px;
 }
 /*--------------------------------------------------------------
 about
@@ -356,6 +391,7 @@ div.nf-form-content{
   border-top: none;
   border-left: none;
   border-right: none;
+  padding-left: 15px;
 }
 .field-wrap.textbox-wrap.nf-fail.nf-error{
   display: flex;
@@ -385,7 +421,7 @@ div.nf-field-label{
 .nf-field-element{
   flex-grow: 1;
 }
-#nf-error-1>.nf-error-msg.nf-error-required-error, #nf-error-5>.nf-error-msg.nf-error-required-error, #nf-error-2>.nf-error-msg.nf-error-required-error, #nf-error-3>.nf-error-msg.nf-error-required-error{
+#nf-error-1>.nf-error-msg.nf-error-required-error, #nf-error-5>.nf-error-msg.nf-error-required-error, #nf-error-2>.nf-error-msg.nf-error-required-error, #nf-error-3>.nf-error-msg.nf-error-required-error, .nf-error-msg.nf-error-invalid-email{
   position: absolute !important;
   font-family: 'Connary-Fagen-Visby-CF-Light';
   font-size: 0.8rem;
@@ -412,8 +448,18 @@ justify-content: center;
 .map>img{
   width: 100%;
   height: auto;
-
 }
+input:focus{
+    outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+}
+
 
   /*xs*/
   @media only screen and (max-width: 576px) {
@@ -422,6 +468,9 @@ justify-content: center;
     }
     .collapse.navbar-collapse{
       margin-right: 0px;
+    }
+    .title_slide{
+      width: 100vw;
     }
   }
   /*sm*/
@@ -432,6 +481,9 @@ justify-content: center;
     .collapse.navbar-collapse{
       margin-right: 0px;
     }
+    .title_slide{
+      width: 70vw;
+    }
   }
   /*md*/
   @media screen and (min-width: 768px) and (max-width: 992px){
@@ -440,6 +492,9 @@ justify-content: center;
     }
     .collapse.navbar-collapse{
       margin-right: 100px;
+    }
+    .title_slide{
+      width: 50vw;
     }
   }
 
@@ -450,5 +505,8 @@ justify-content: center;
     }
     .collapse.navbar-collapse{
       margin-right: 0px;
+    }
+    .title_slide{
+      width: 30vw;
     }
   }
