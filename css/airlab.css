@@ -236,6 +236,11 @@ Founding Story
   border-radius: 40px;
   border: 1px solid #005555;
 }
+.outer_animated{
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+}
 .inner_circle{
   width: 15px;
   height: 15px;
@@ -259,6 +264,7 @@ Founding Story
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
 }
 .on_hover:hover>.outer_circle{
   border: 1px dashed #005555;
@@ -356,7 +362,7 @@ meet team
 }
 .paper_heading {
   position: absolute;
-  top: 50%;  
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -365,10 +371,10 @@ meet team
   padding-top:5%
 }
 .paper_row {
- 
+
 }
 .paper_link {
-  
+
 }
 
   .student_data_wraper{

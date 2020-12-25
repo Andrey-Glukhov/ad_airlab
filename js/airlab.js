@@ -2,11 +2,12 @@
 $(".time_circle").on("click",function(){
 
   if ($(this).hasClass('on_hover')){
-
+    $(this).children('.image_circle').css('opacity', '1');
+    $(this).children('.outer_circle').addClass('outer_animated');
     $(this).removeClass('on_hover');
-
   } else {
-    
+    $(this).children('.image_circle').css('opacity', '0');
+    $(this).children('.outer_circle').removeClass('outer_animated');
     $(this).addClass('on_hover');
   };
 
