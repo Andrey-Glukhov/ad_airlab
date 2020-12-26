@@ -296,6 +296,24 @@ background-position: center;
 .pict_wraper.on_top{
   margin-bottom: 50px;
 }
+.popup_top {
+  display:none;
+  position: absolute;
+  left: 100%;
+  top: 0;;
+}
+.popup_bottom {
+  display:none;
+  position: absolute;
+  left: 100%;
+  bottom: 0;;
+}
+.popup_top.open_pop {
+  display: block;
+}
+.popup_bottom.open_pop {
+  display: block;
+}
 /*--------------------------------------------------------------
 about
 --------------------------------------------------------------*/
