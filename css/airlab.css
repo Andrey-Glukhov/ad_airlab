@@ -119,7 +119,7 @@ Founding Story
 .slide {
   font-family: 'Connary-Fagen-Visby-CF-Bold';
   font-size: 1.2rem;
-  width: 3vw;
+  width: 30px;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -128,7 +128,7 @@ Founding Story
   color: #015556;
 }
 .half_slide{
-  width: 10vw;
+  width: 130px;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -145,7 +145,7 @@ Founding Story
 .wrapper {
   display: flex;
   flex-direction: row;
-  width: 300vw;
+  width: fit-content;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
 }
@@ -176,29 +176,34 @@ Founding Story
   background: none;
 }
 .title_slide{
-  margin-left: 60px;
-  margin-right: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 20px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 35vw;
 }
 .title_slide>h1{
   font-family: 'Connary-Fagen-Visby-CF-Light';
-  font-size: 4rem;
+  font-size: 3.8rem;
   color: #009a78;
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 .title_slide>h1>.t_bold{
   font-family: 'Connary-Fagen-Visby-CF-Bold';
-  font-size: 4rem;
-  color: #009a78;
-  margin-top: 10vh;
 }
-.about_section>p{
+.inner_about_section>p{
   font-family: 'Connary-Fagen-Visby-CF-Light';
   font-size: 1rem;
   color: #009a78;
+}
+.inner_about_section{
+  height: 100%;
+  overflow: scroll;
+}
+.about_section{
+  overflow: hidden;
 }
 .half_slide.bottom{
   align-self: flex-end;
@@ -262,8 +267,10 @@ Founding Story
   background-position: center;
   background-size: cover;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   opacity: 0;
 }
 .on_hover:hover>.outer_circle{
@@ -313,6 +320,14 @@ background-position: center;
 }
 .popup_bottom.open_pop {
   display: block;
+}
+.ceo_portrait{
+  width: 30vw;
+  background-image: url('../img/ceo-01.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 40px;
 }
 /*--------------------------------------------------------------
 about
@@ -388,13 +403,6 @@ meet team
   padding-right: 5%;
   padding-top:5%
 }
-.paper_row {
-
-}
-.paper_link {
-
-}
-
   .student_data_wraper{
     padding:10px 20%;
   }
@@ -509,7 +517,7 @@ justify-content: center;
   width: 100%;
   height: auto;
 }
-input:focus{
+input:focus, textarea:focus{
     outline: none;
 }
 input:-webkit-autofill,
@@ -531,6 +539,11 @@ input:-webkit-autofill:active {
     }
     .title_slide{
       width: 100vw;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .title_slide>h1{
+      font-size: 2rem;
     }
   }
   /*sm*/
@@ -543,6 +556,8 @@ input:-webkit-autofill:active {
     }
     .title_slide{
       width: 70vw;
+      padding-left: 40px;
+      padding-right: 40px;
     }
   }
   /*md*/
@@ -555,6 +570,8 @@ input:-webkit-autofill:active {
     }
     .title_slide{
       width: 50vw;
+      padding-left: 40px;
+      padding-right: 40px;
     }
   }
 
@@ -567,14 +584,11 @@ input:-webkit-autofill:active {
       margin-right: 0px;
     }
     .title_slide{
-      width: 30vw;
+      width: 45vw;
+      padding-left: 50px;
+      padding-right: 50px;
     }
-  }
-
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-      transition: background-color 5000s ease-in-out 0s;
-      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    .title_slide>h1{
+      font-size: 3.5rem;
+    }
   }
