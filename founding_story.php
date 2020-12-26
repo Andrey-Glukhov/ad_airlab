@@ -48,20 +48,25 @@ get_header(); ?>
           </div>
           <div class="image_circle" style="background-image:url(<?php the_sub_field('event_image');?>);">
           </div>
-        </div>
-        <div class="time_line"></div>
-      <?php  }else{  ?>
-        <div class="time_line"></div>
-        <div class="on_hover time_circle <?php the_sub_field('direction_class');?> <?php the_sub_field('length_class');?>">
-          <div class="outer_circle">
-          </div>
-          <div class="inner_circle">
-          </div>
-          <div class="image_circle" style="background-image:url(<?php the_sub_field('event_image');?>);">
+          <div class="description popup_top"><?php the_sub_field('description'); ?>
           </div>
         </div>
-        <div class="pict_wraper on_bottom" style="background-image:url(<?php the_sub_field('pictogramm');?>);"></div>
-      <?php  }
+        <div class="time_line"></div>        
+    <?php  }else{  ?>
+      <div class="time_line"></div>
+      <div class="on_hover time_circle <?php the_sub_field('direction_class');?> <?php the_sub_field('length_class');?>">
+        <div class="outer_circle">
+        </div>
+        <div class="inner_circle">
+        </div>
+        <div class="image_circle" style="background-image:url(<?php the_sub_field('event_image');?>);">
+        </div>
+        <div class="description popup_bottom"><?php the_sub_field('description'); ?>        
+        </div>
+      </div>
+      <div class="pict_wraper on_bottom" style="background-image:url(<?php the_sub_field('pictogramm');?>);"></div>
+     
+    <?php  }
 
       ?>
     </div>
