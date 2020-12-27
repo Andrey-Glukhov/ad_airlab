@@ -352,9 +352,14 @@ meet team
   margin-top: 10vh;
   display: flex;
   justify-content: center;}
+.st_team_profiles>.students_portret{
+  width: 20%;
+  height: auto;
+  position: relative;
+}  
 
-  .st_team_profiles>img{
-    width: 20%;
+  .st_team_profiles>.students_portret>img{
+    width: 100%;
     height: auto;
   }
   .st_line{
@@ -372,7 +377,7 @@ meet team
     display: flex;
     flex-direction: column;
   }
-  .st_left>img{
+  .st_left>.students_portret{
     align-self: flex-end;
   }
 /*--------------------------------------------------------------
@@ -416,7 +421,47 @@ meet team
     font-size: 0.8rem;
     color: #009a78;
   }
-
+  .st_about-content{
+    font-family: 'Connary-Fagen-Visby-CF-Light';
+    font-size: 0.8rem;
+    color: #009a78;
+  }
+  .students_dash_left {
+    position: absolute;
+    top: 50%;
+    left:-80%;
+    width:80%;
+    height: 50%;
+    border-left: 1px dashed #009a78;
+    border-top: 1px dashed #009a78;
+  }
+  .students_dash_right {
+    position: absolute;
+    top: 50%;
+    left:100%;
+    width:80%;
+    height: 50%;
+    border-right: 1px dashed #009a78;
+    border-top: 1px dashed #009a78;
+  }
+  .students_mark_left, .students_mark_right {
+    width: 16px;
+    height: 16px;
+    /* border: 8px solid #005555; */
+    background: #005555;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* left:-20px; */
+  }
+  .students_mark_right {
+    left:-23px;
+  }
+  .students_mark_left {
+    right:-23px;
+  }
+  
   /*--------------------------------------------------------------
   subscribe
   --------------------------------------------------------------*/

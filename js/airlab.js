@@ -52,27 +52,25 @@ $(".time_circle").on("click",function(){
 //
 // });
 
- // Timelene tooltip
-//  var tooltipElem;
-//  document.onmouseover = function(event) {
-//    var target = event.target;
-//    var tooltipHtml = target.dataset.tooltip;
-//    if (!tooltipHtml) return;
-//    tooltipElem = document.createElement('div');
-//    tooltipElem.className = 'tooltip_r_d';
-//    tooltipElem.innerHTML = tooltipHtml;
-//    document.body.append(tooltipElem);
-//    var coords = target.getBoundingClientRect();
-//    if ($(target).parent().siblings('.row').children('.column_ongoing').children().length) {
-//      var left = coords.left + (target.offsetWidth )/2 - tooltipElem.offsetWidth - 20;//- tooltipElem.offsetWidth) / 2;
-//    } else {
-//      var left = coords.left + (target.offsetWidth )/2 + 20;
-//    }
-//    //if (left < 0) left = 0;
-//    var top = coords.top + target.offsetHeight/2 -tooltipElem.offsetHeight/2;
-//    // if (top < 0) {
-//    //   top = coords.top + target.offsetHeight + 5;
-//    // }
-//    tooltipElem.style.left = left + 'px';
-//    tooltipElem.style.top = top + 'px';
-//  };
+function showhide_toggle(type, post_id, more_text, less_text) {
+  var   $link = jQuery("#"+ type + "-link-" + post_id)
+    , $link_a = jQuery('a', $link)
+    , $content = jQuery("#"+ type + "-content-" + post_id)
+    , $toggle = jQuery("#"+ type + "-toggle-" + post_id)
+    , show_hide_class = 'sh-show sh-hide';
+  $link.toggleClass(show_hide_class);
+  $content.toggleClass(show_hide_class).toggle();
+  if($link_a.attr('aria-expanded') === 'true') {
+    $link_a.attr('aria-expanded', 'false');
+  } else {
+    $link_a.attr('aria-expanded', 'true');
+  }
+  if($toggle.text() === more_text) {
+    $toggle.text(less_text);
+    $link.trigger( "sh-link:more" );
+  } else {
+    $toggle.text(more_text);
+    $link.trigger( "sh-link:less" );
+  }
+  $link.trigger( "sh-link:toggle" );
+}
