@@ -17,7 +17,7 @@ get_header(); ?>
     $current_year ="";
     ?>
 
-    <div class="title_slide">
+    <div class="title_slide first">
       <h1><span>About Our</span><br><span class="t_bold">AIRLabs</span></h1>
       <div class="about_section"><div class="inner_about_section"><?php the_content();?></div></div>
 
@@ -27,7 +27,7 @@ get_header(); ?>
     if( have_rows('single_story') ) : while( have_rows('single_story') ) : the_row();
     $story_year = substr(get_sub_field('date'), -4);
 
-    if ($current_year != $story_year) {
+     if ($current_year != $story_year) {
       $current_year = $story_year;
       ?>
       <div class="slide one story_date_heading"><?php echo($current_year);?></div>
@@ -40,7 +40,6 @@ get_header(); ?>
     <?php	}?>
     <div class="half_slide <?php the_sub_field('length_class');?> <?php the_sub_field('direction_class');?>">
       <?php if(get_sub_field('direction_class') == 'top') {  ?>
-        <div class="pict_wraper on_top" style="background-image:url(<?php the_sub_field('pictogramm');?>);"></div>
         <div class="on_hover time_circle <?php the_sub_field('direction_class');?> <?php the_sub_field('length_class');?>">
           <div class="outer_circle">
           </div>
@@ -48,10 +47,12 @@ get_header(); ?>
           </div>
           <div class="image_circle" style="background-image:url(<?php the_sub_field('event_image');?>);">
           </div>
-          <div class="description popup_top"><?php the_sub_field('description'); ?>
+          <div class="description popup_top"><img src="<?php the_sub_field('pictogramm');?>"/>
+            <p class="timeline_date"><?php the_sub_field('title'); ?></p>
+            <?php the_sub_field('description'); ?>
           </div>
         </div>
-        <div class="time_line"></div>        
+        <div class="time_line"></div>
     <?php  }else{  ?>
       <div class="time_line"></div>
       <div class="on_hover time_circle <?php the_sub_field('direction_class');?> <?php the_sub_field('length_class');?>">
@@ -61,11 +62,12 @@ get_header(); ?>
         </div>
         <div class="image_circle" style="background-image:url(<?php the_sub_field('event_image');?>);">
         </div>
-        <div class="description popup_bottom"><?php the_sub_field('description'); ?>        
+        <div class="description popup_bottom"><img src="<?php the_sub_field('pictogramm');?>"/>
+          <p class="timeline_date"><?php the_sub_field('title'); ?></p>
+          <?php the_sub_field('description'); ?>
         </div>
       </div>
-      <div class="pict_wraper on_bottom" style="background-image:url(<?php the_sub_field('pictogramm');?>);"></div>
-     
+
     <?php  }
 
       ?>
@@ -73,7 +75,7 @@ get_header(); ?>
   <?php endwhile; ?>
 <?php endif; ?>
 
-<div class="title_slide">
+<div class="title_slide second">
   <h1><span>Scientific R&amp;D</span><br><span class="t_bold">at Ahold Delhaize</span></h1>
   <?php
     $statement = new WP_Query( array( 'page_id' => 2 ));
