@@ -50,5 +50,44 @@ add_theme_support('custom-header');
 add_theme_support('post-formats', array('aside', 'chat', 'gallery','link','image','quote','status','video'));
 add_theme_support('post-thumbnails');
 
+add_shortcode( 'showhide', 'showhide_shortcode' );
+function showhide_shortcode( $atts, $content = null ) {
+	// Variables
+	$post_id = get_the_id();
+	$word_count = number_format_i18n( sizeof( explode( ' ', strip_tags( $content ) ) ) );
+
+	// Extract ShortCode Attributes
+	$attributes = shortcode_atts( array(
+		'type' => 'pressrelease',
+		'more_text' => __( 'Show Press Release (%s More Words)', 'wp-showhide' ),
+		'less_text' => __( 'Hide Press Release (%s Less Words)', 'wp-showhide' ),
+		'hidden' => 'yes'
+	), $atts );
+
+	// More/Less Text
+	$more_text = sprintf( $attributes['more_text'], $word_count );
+	$less_text = sprintf( $attributes['less_text'], $word_count );
+  //$more_text = '>>>';
+  //$less_text = '<<<';
+	// Determine Whether To Show Or Hide Press Release
+	$hidden_class = 'sh-hide';
+	$hidden_css = 'display: none;';
+	$hidden_aria_expanded = 'false';
+	if( $attributes['hidden'] === 'no' ) {
+		$hidden_class = 'sh-show';
+		$hidden_css = 'display: block;';
+		$hidden_aria_expanded = 'true';
+		$tmp_text = $more_text;
+		$more_text = $less_text;
+		$less_text = $tmp_text;
+	}
+
+	// Format HTML Output
+	$output  = '<div id="' . $attributes['type'] . '-link-' . $post_id . '" class="sh-link ' . $attributes['type'] . '-link ' . $hidden_class .'"><a href="#" onclick="showhide_toggle(\'' . esc_js( $attributes['type'] ) . '\', ' . $post_id . ', \'' . esc_js( $more_text ) . '\', \'' . esc_js( $less_text ) . '\'); return false;" aria-expanded="' . $hidden_aria_expanded .'"><span id="' . $attributes['type'] . '-toggle-' . $post_id . '">' . $more_text . '</span></a></div>';
+	$output .= '<div id="' . $attributes['type'] . '-content-' . $post_id . '" class="sh-content ' . $attributes['type'] . '-content ' . $hidden_class . '" style="' . $hidden_css . '">' . do_shortcode( $content ) . '</div>';
+
+	return $output;
+}
+
 
 ?>

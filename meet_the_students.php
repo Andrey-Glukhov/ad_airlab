@@ -37,7 +37,16 @@ get_header(); ?>
         <div class="col-6 st_team_profiles st_right">
         <?php  }
         ?>
+        <div class="students_portret">
         <img src="<?php the_field('portret'); ?>"/>
+        <?php  if ($left_column){?>
+            <div class="students_dash_left"></div>
+            <div class="students_mark_left"></div>
+          <?php  } else {?>
+            <div class="students_dash_right"></div>
+            <div class="students_mark_right"></div>
+          <?php }?>
+          </div>
         <div class="student_data_wraper">
         <p class="st_name"><?php the_title();?></p>
         <div class="st_about"><?php the_content();?></div>
