@@ -67,6 +67,7 @@ ul.navbar-nav{
 }
 .dropdown-menu.show{
   border: none;
+  background: none;
 }
 .dropdown-menu.show>li>a:hover{
   background: none !important;
@@ -494,6 +495,7 @@ meet team
     color: #015556;
     max-height: 72vh;
     overflow: hidden;
+    height: 100%;
   }
   .abstract_wrapper{
     height: 100%;
@@ -519,7 +521,7 @@ meet team
     border-radius: 14px;
     padding: 2px 15px;
     font-family: 'Connary-Fagen-Visby-CF-Light';
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .abstract_data{
     display: flex;
@@ -534,7 +536,7 @@ meet team
     border-radius: 14px;
     padding: 2px 15px;
     font-family: 'Connary-Fagen-Visby-CF-Light';
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .author{
     display: flex;
@@ -551,11 +553,95 @@ meet team
     font-family: 'Connary-Fagen-Visby-CF-Bold';
     font-size: 1rem;
   }
-  .single_paper_wraper>img{
-    top: 0;
+  .single_title_wraper{
     position: absolute;
+    top:0;
+    z-index: 100;
+    padding-right: 15px;
+}
+  .single_title_wraper>p{
+    padding: 10px;
+    font-family: 'Connary-Fagen-Visby-CF-Bold';
+    font-size: 0.8rem;
+    color: #ffffff;
+  }
+  .single_paper_wraper>img{
+    position: relative;
     width: 100%;
     height: auto;
+  }
+.single_paper_wraper{
+    margin-bottom: 30px;
+  }
+  .tag_wraper{
+    margin: 15px 0;
+    padding: 0;
+    text-align: center;
+  }
+  .tag_wraper>li{
+    display: inline-block;
+    margin: 0 10px;
+    padding: 2px 15px;
+    border-radius: 21px;
+    background-color: #009a78;
+    color:#ffffff;
+    font-family: 'Connary-Fagen-Visby-CF-Light';
+    font-size: 0.8rem;
+  }
+  /*--------------------------------------------------------------
+  news
+  --------------------------------------------------------------*/
+  .news_title{
+    background-color: #015556;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .news_title>h2{
+    color: #ffffff;
+    font-family: 'Connary-Fagen-Visby-CF-Bold';
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .news_wrapper {
+    margin-top: 100px;
+  }
+  .tweet_feed{
+    background-color: #015556;
+  padding: 10px 10px 80px 10px;
+    overflow: hidden;
+    max-height: 90vh;
+  }
+  .feed_wrapper{
+    height: 100%;
+    overflow: auto;
+  }
+  .join_wraper{
+    padding-top:20px;
+    display: flex;
+    align-items: center;
+  }
+  .join_wraper>img{
+    width: 50px;
+    height: auto;
+  }
+  .join_wraper>p{
+  margin: 0 20px;
+  font-family: 'Connary-Fagen-Visby-CF-Light';
+  font-size: 0.8rem;
+  color: #ffffff;
+  }
+  .single_news_wraper{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .single_news_title{
+    padding: 5px;
+    font-family: 'Connary-Fagen-Visby-CF-Bold';
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  .items_wraper{
+    padding-left: 0;
   }
   /*--------------------------------------------------------------
   connect
