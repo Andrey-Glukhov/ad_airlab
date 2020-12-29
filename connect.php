@@ -6,13 +6,19 @@ get_header(); ?>
 
 <div class="container-fluid connect_container">
     <div class="row justify-content-center connect_row row-eq-height">
-      <div class="col-lg-4 col-md-5 col-sm-10 col-10">
+      <div class="col-lg-4 col-md-5 col-sm-8 col-12">
         <?php
         $connect = new WP_Query( array( 'page_id' => 15 ) );
         if ( $connect->have_posts() ) : while ( $connect->have_posts() ) : $connect->the_post();
         ?>
         <div class="form_background">
-          <?php the_content(); ?></div>
+          <?php the_content(); ?>
+          <div class="connect-icons">
+                        <a href="" target="_blank"><img src="http://localhost:8888/AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/instagram-square-brands.png"/></a>
+                        <a href="" target="_blank"><img src="http://localhost:8888/AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/linkedin-brands.png"/></a>
+                        <a href="https://twitter.com/AIforRetail" target="_blank"><img src="http://localhost:8888/AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/twitter-square-brands.png"></a></div>
+          <div class="search_name"><p>@AIRLAB</p></div>
+        </div>
         <?php endwhile; ?>
         <?php endif; ?>
       </div>

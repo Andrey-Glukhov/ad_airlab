@@ -5,20 +5,23 @@
 get_header(); ?>
 
 <div class="container_fluid">
-  <div class="row justify-content-center">
-    <div class="col-12 meet_researchers">
-      <h2>Meet the team</h2>
+  <div class="row paper_wrapper justify-content-between">
+    <div class="col-lg-4 col-md-5 col-sm-10 col-12 papers_slide">
+      <h1><span>Meet Researchers</span><br><span class="t_bold">& Staff.</span></h1>
+    </div>
+    <div class="col-1">
+      <button class="back" onclick="window.location.href='http://localhost:8888/AD_AIRLab/wordpress/research-papers-talks/';">Back</button>
     </div>
   </div>
-  
-    
+
+
 
     <?php $args = array(
       'post_type' => 'team',
       'post_status' => 'publish',
       'order' => 'ASC',
       'posts_per_page' => -1,
-      'cat' => 3
+      'cat' => 5
 
     );
     $left_column = true;
@@ -43,7 +46,7 @@ get_header(); ?>
                 <div class="rs_mark_inner_circle"></div>
                 <div class="rs_mark_dash"></div>
               </div>
-            </div>  
+            </div>
           </div>
         </div>
       <?php  }else{?>
@@ -57,8 +60,8 @@ get_header(); ?>
                 <div class="rs_mark_inner_circle"></div>
                 <div class="rs_mark_dash"></div>
               </div>
-            </div>  
-          </div> 
+            </div>
+          </div>
           </div>
         <div class="col-6 researchers_profiles rs_right">
           <div class="researchers_data_wraper">
@@ -68,7 +71,7 @@ get_header(); ?>
         </div>
         <?php  }
         ?>
-    </div> 
+    </div>
     <?php $left_column = !$left_column;
     endwhile; ?>
   <?php endif; ?>
