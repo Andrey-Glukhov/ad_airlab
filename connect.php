@@ -14,8 +14,7 @@ get_header(); ?>
         <div class="form_background">
           <?php the_content(); ?>
           <div class="connect-icons">
-                        <a href="" target="_blank"><img src="http://localhost:8888/AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/instagram-square-brands.png"/></a>
-                        <a href="" target="_blank"><img src="http://localhost:8888/AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/linkedin-brands.png"/></a>
+                        <a href="https://www.linkedin.com/company/aiforretail" target="_blank"><img src="http://localhost:8888/AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/linkedin-brands.png"/></a>
                         <a href="https://twitter.com/AIforRetail" target="_blank"><img src="http://localhost:8888/AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/twitter-square-brands.png"></a></div>
           <div class="search_name"><p>@AIRLAB</p></div>
         </div>

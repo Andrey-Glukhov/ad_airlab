@@ -9,8 +9,8 @@ get_header(); ?>
     <div class="col-lg-4 col-md-5 col-sm-10 col-12 papers_slide">
       <h1><span>Meet Researchers</span><br><span class="t_bold">& Staff.</span></h1>
     </div>
-    <div class="col-1">
-      <button class="back" onclick="window.location.href='http://localhost:8888/AD_AIRLab/wordpress/research-papers-talks/';">Back</button>
+    <div class="col-sm-2 col-12 back_button_wraper">
+      <button class="back" onclick="window.location.href='http://localhost:8888/AD_AIRLab/wordpress/people/';">Back</button>
     </div>
   </div>
 
@@ -31,13 +31,13 @@ get_header(); ?>
     <div class="row rs_wraper">
     <?php if ($left_column){?>
       <div class="rs_liner_left"></div>
-        <div class="col-6 researchers_profiles rs_left">
+        <div class="col-sm-6 col-8 researchers_profiles rs_left">
           <div class="researchers_data_wraper">
             <p class="rs_name"><?php the_title();?></p>
             <div class="rs_about"><?php the_content();?></div>
           </div>
         </div>
-        <div class="col-6 researchers_profiles rs_right">
+        <div class="col-sm-6 col-4 researchers_profiles rs_right">
           <div class="researchers_portret">
             <div class="portret_mark">
               <img src="<?php the_field('portret'); ?>"/>
@@ -51,7 +51,7 @@ get_header(); ?>
         </div>
       <?php  }else{?>
         <div class="rs_liner_right"></div>
-        <div class="col-6 researchers_profiles rs_left">
+        <div class="col-sm-6 col-4 researchers_profiles rs_left">
           <div class="researchers_portret">
             <div class="portret_mark">
               <img src="<?php the_field('portret'); ?>"/>
@@ -63,7 +63,7 @@ get_header(); ?>
             </div>
           </div>
           </div>
-        <div class="col-6 researchers_profiles rs_right">
+        <div class="col-sm-6 col-8 researchers_profiles rs_right">
           <div class="researchers_data_wraper">
             <p class="rs_name"><?php the_title();?></p>
             <div class="rs_about"><?php the_content();?></div>
