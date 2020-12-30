@@ -5,7 +5,7 @@
 get_header(); ?>
 
 <div class="outer-wrapper">
-  <div class="wrapper">
+  <div class="wrapper about_wrapper">
     <?php $args = array(
       'page_id' => 21,
       'meta_key' => 'date',
@@ -20,6 +20,7 @@ get_header(); ?>
     <div class="title_slide first">
       <h1><span>About Our</span><br><span class="t_bold">AIRLabs</span></h1>
       <div class="about_section"><div class="inner_about_section"><?php the_content();?></div></div>
+      <button class="about_scroll_button" onclick="document.querySelector('.story_date_heading').scrollIntoView();"></button>
     </div>
 
     <?php
