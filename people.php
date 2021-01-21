@@ -17,16 +17,16 @@ get_header(); ?>
   <?php endif; ?>
 </div>
 <div class="col-lg-4 col-md-3 col-sm-8 col-12 people_choise">
-  <a href="http://localhost:8888/AD_AIRLab/wordpress/researchers-staff/">
+  <a href="http://192.168.1.5:8888//AD_AIRLab/wordpress/researchers-staff/">
     <h2 class="aligner">Our Students</h2>
-  <img src="http://localhost:8888/AD_AIRLab/wordpress/wp-content/uploads/2020/12/team_portrets-03.png"/>
+  <img src="http://192.168.1.5:8888//AD_AIRLab/wordpress/wp-content/uploads/2020/12/team_portrets-03.png"/>
   <h2>Researchers and Staff</h2>
 </a>
 </div>
 <div class="col-lg-4 col-md-3 col-sm-8 col-12 people_choise">
-  <a href="http://localhost:8888/AD_AIRLab/wordpress/our-students/">
+  <a href="http://192.168.1.5:8888//AD_AIRLab/wordpress/our-students/">
   <h2 class="desctop_students" class="mobile_people">Our Students</h2>
-  <img src="http://localhost:8888/AD_AIRLab/wordpress/wp-content/uploads/2020/12/team_portrets-04.png"/>
+  <img src="http://192.168.1.5:8888//AD_AIRLab/wordpress/wp-content/uploads/2020/12/team_portrets-04.png"/>
   <h2 class="aligner">Researchers and Staff</h2>
   <h2 class="mobile_students">Our Students</h2>
   </a>

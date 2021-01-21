@@ -45,7 +45,7 @@ get_header();
   <div class="col-6 tweet_feed">
     <div class="feed_wrapper"><a class="twitter-timeline" href="https://twitter.com/AIforRetail?ref_src=twsrc%5Etfw">Tweets by AIforRetail</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-    <div class="join_wraper"><img src="http://localhost:8888/AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/twitter-brands-01.png"/><p>Join the conversation</p></div>
+    <div class="join_wraper"><img src="http://192.168.1.5:8888//AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/twitter-brands-01.png"/><p>Join the conversation</p></div>
   </div>
 
 </div>

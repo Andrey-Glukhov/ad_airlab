@@ -6,7 +6,7 @@ get_header(); ?>
 
 <div class="container_fluid">
   <div class="row justify-content-center">
-    <div class="col-12 meet_st_pict"><img src="http://localhost:8888/AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/Meet_Students-01.png"/>
+    <div class="col-12 meet_st_pict"><img src="http://192.168.1.5:8888//AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/Meet_Students-01.png"/>
     </div>
   </div>
   <div class="row st_wraper">
@@ -28,7 +28,7 @@ get_header(); ?>
         <div class="col-6 st_team_profiles st_left">
       <?php  }else{
         if($first_cycle){?>
-          <div class="col-6 st_left">Meet</div>
+          <div class="col-6 st_left" style="opacity:0">Meet</div>
   <?php  $first_cycle =!$first_cycle;
       } else{?>
         <div class="col-6 st_left"></div>

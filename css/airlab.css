@@ -140,6 +140,7 @@ a.dropdown-item:hover {
 ul.dropdown-menu {
     background: none;
     border: none;
+    top: 50%;
 }
 
 .animated-icon1 {
@@ -259,7 +260,7 @@ Founding Story
 .slide {
     font-family: 'Connary-Fagen-Visby-CF-Bold';
     font-size: 1.2rem;
-    width: 30px;
+    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -930,6 +931,50 @@ display: inline-block;
     margin: 5px 0;
 }
 
+.back_button_wraper {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.back_button_wraper>button {
+    align-self: flex-end;
+}
+
+
+/*--------------------------------------------------------------
+what
+--------------------------------------------------------------*/
+
+.what_background>img {
+    width: 100%;
+    height: auto;
+}
+
+.what_choise_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.what_choise {
+    width: 69%;
+    transform-origin: top right;
+    transform: rotate(-18deg);
+    margin-bottom: 40px;
+}
+
+.what_heading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+}
+
+.what_heading>h2 {
+    color: #ffffff;
+    font-family: 'Connary-Fagen-Visby-CF-Bold';
+    font-size: 2rem;
+}
+
 
 /*--------------------------------------------------------------
 papers
@@ -969,7 +1014,7 @@ papers
 
 .paper_heading>p {
     font-family: 'Connary-Fagen-Visby-CF-Bold';
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #ffffff;
 }
 
@@ -1002,6 +1047,12 @@ papers
     color: #009a78;
 }
 
+.paper_buton_wraper {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
 
 /*--------------------------------------------------------------
 abstracts
@@ -1012,7 +1063,7 @@ abstracts
 }
 
 .abstract_content {
-    background-image: url(http://localhost:8888/AD_AIRLab/wordpress/wp-content/uploads/2020/12/PaperWhite-min.png);
+    background-image: url(http://192.168.1.5:8888//AD_AIRLab/wordpress/wp-content/uploads/2020/12/PaperWhite-min.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1039,7 +1090,8 @@ abstracts
 }
 
 .back_button {
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: flex-end;
 }
@@ -1089,21 +1141,30 @@ button.download {
     font-size: 1rem;
 }
 
-.single_title_wraper {}
+.single_title_wraper {
+    position: absolute;
+    z-index: 105;
+}
+
+.left_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .single_paper_wraper>img {
     top: 0;
     position: absolute;
     top: 0;
     z-index: 100;
-    padding-right: 15px;
 }
 
 .single_title_wraper>p {
     padding: 10px;
     font-family: 'Connary-Fagen-Visby-CF-Bold';
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #ffffff;
+    padding: 15px 25px 15px 15px;
 }
 
 .single_paper_wraper>img {
@@ -1113,6 +1174,7 @@ button.download {
 }
 
 .single_paper_wraper {
+    position: relative;
     margin-bottom: 30px;
 }
 
@@ -1120,6 +1182,17 @@ button.download {
     margin: 15px 0;
     padding: 0;
     text-align: center;
+}
+
+.tag_wraper>li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 2px 15px;
+    border-radius: 21px;
+    background-color: #009a78;
+    color: #ffffff;
+    font-family: 'Connary-Fagen-Visby-CF-Light';
+    font-size: 0.8rem;
 }
 
 .tag_wraper>li {
@@ -1203,8 +1276,6 @@ news
 
 
 /*--------------------------------------------------------------
-=======
-}
 
 
 /*--------------------------------------------------------------
@@ -1415,6 +1486,40 @@ input:-webkit-autofill:active {
 }
 
 
+/*--------------------------------------------------------------
+media
+--------------------------------------------------------------*/
+
+@media only screen and (max-width: 500px) {
+    .abstract_data {
+        flex-direction: column;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    .single_title_wraper>p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 576px) {
+    .single_title_wraper>p {
+        font-size: 1rem;
+    }
+    .abstract_data {
+        flex-direction: row;
+    }
+    .abstract_data {
+        align-items: flex-start;
+        flex-direction: row;
+        margin-bottom: 40px;
+        ;
+    }
+    .left_wrapper {
+        padding-right: 20px;
+    }
+}
+
+
 /*xs*/
 
 @media only screen and (max-width: 576px) {
@@ -1446,7 +1551,7 @@ input:-webkit-autofill:active {
         cursor: pointer;
     }
     .papers_slide>h1 {
-        font-size: 2rem;
+        font-size: 2.6rem;
     }
     .home_container>h1 {
         margin: 0 20px;
@@ -1468,12 +1573,66 @@ input:-webkit-autofill:active {
     .people_choise {
         margin: 30px 0;
     }
+    .researchers_data_wraper {
+        padding: 10px 0px 10px 20px;
+    }
+    .researchers_profiles>.researchers_portret {
+        width: 80%;
+    }
+    .rs_mark_left {
+        display: none;
+    }
+    .rs_mark_right {
+        display: none;
+    }
+    .rs_liner_left,
+    .rs_liner_right {
+        width: 67%;
+    }
+    .back_button_wraper {
+        justify-content: flex-end;
+    }
+    #bs-example-navbar-collapse-1 {
+        background-color: #fff9ec;
+        margin: 0 -16px;
+    }
+    .menu-item {
+        border: none;
+    }
+    .menu-item>a {
+        text-align: center;
+        font-family: 'Connary-Fagen-Visby-CF-Bold';
+        font-size: 2rem;
+    }
+    .dropdown:hover>.dropdown-menu {
+        display: none;
+    }
+    .what_heading>h2 {
+        font-size: 2.2rem;
+    }
+    .what_heading {
+        padding: 20px;
+    }
+    .papers_slide {
+        margin-bottom: 30px;
+    }
+    .what_choise_wrapper {
+        margin-bottom: 30px;
+    }
+    .paper_buton_wraper {
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+    .papers_slide {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 
 /*sm*/
 
-@media screen and (min-width: 576px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 767px) {
     ul.navbar-nav {
         width: 100% !important;
     }
@@ -1503,12 +1662,68 @@ input:-webkit-autofill:active {
     .people_choise {
         margin: 30px 0;
     }
+    .researchers_data_wraper {
+        padding: 10px 15%;
+    }
+    .researchers_profiles>.researchers_portret {
+        width: 40%;
+    }
+    .rs_liner_left,
+    .rs_liner_right {
+        width: 50%;
+    }
+    #bs-example-navbar-collapse-1 {
+        background-color: #fff9ec;
+        margin: 0 -16px;
+    }
+    .menu-item {
+        border: none;
+    }
+    .menu-item>a {
+        text-align: center;
+        font-family: 'Connary-Fagen-Visby-CF-Bold';
+        font-size: 2rem;
+    }
+    .dropdown:hover>.dropdown-menu {
+        display: none;
+    }
+    .what_heading>h2 {
+        font-size: 1.8rem;
+    }
+    .what_heading {
+        padding: 12px;
+    }
+    .papers_slide {
+        margin-bottom: 30px;
+    }
+    .what_choise_wrapper {
+        margin-bottom: 30px;
+    }
+    .paper_heading>p {
+        font-size: 1.2rem;
+    }
+    .paper_buton_wraper {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .abstract_data {
+        align-items: flex-start;
+        flex-direction: row;
+        margin-bottom: 40px;
+        ;
+    }
+    .left_wrapper {
+        padding-right: 20px;
+    }
+    .single_title_wraper>p {
+        font-size: 0.9rem;
+    }
 }
 
 
 /*md*/
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 767px) and (max-width: 992px) {
     ul.navbar-nav {
         width: 90% !important;
     }
@@ -1525,6 +1740,40 @@ input:-webkit-autofill:active {
     }
     .people_choise>a>h2 {
         font-size: 2rem;
+    }
+    .researchers_data_wraper {
+        padding: 10px 15%;
+    }
+    .researchers_profiles>.researchers_portret {
+        width: 35%;
+    }
+    .rs_liner_left,
+    .rs_liner_right {
+        width: 50%;
+    }
+    .menu-item>a {
+        text-align: left;
+    }
+    .what_heading>h2 {
+        font-size: 1.2rem;
+    }
+    .what_heading {
+        padding: 8px;
+    }
+    .paper_heading>p {
+        font-size: 1.2rem;
+    }
+    .paper_buton_wraper {
+        align-items: flex-start;
+    }
+    .paper_buton_wraper {
+        justify-content: flex-start;
+    }
+    .single_title_wraper>p {
+        font-size: 0.8rem;
+    }
+    .abstract_data {
+        flex-direction: column;
     }
 }
 
@@ -1554,5 +1803,33 @@ input:-webkit-autofill:active {
     }
     .people_choise>a>h2 {
         font-size: 2.6rem;
+    }
+    .researchers_data_wraper {
+        padding: 10px 20%;
+    }
+    .researchers_profiles>.researchers_portret {
+        width: 20%;
+    }
+    .rs_liner_left,
+    .rs_liner_right {
+        width: 50%;
+    }
+    .what_heading>h2 {
+        font-size: 2rem;
+    }
+    .what_heading {
+        padding: 15px;
+    }
+    .paper_heading>p {
+        font-size: 0.8rem;
+    }
+    .paper_buton_wraper {
+        justify-content: flex-end;
+    }
+    .single_title_wraper>p {
+        font-size: 1rem;
+    }
+    .abstract_data {
+        flex-direction: column;
     }
 }
