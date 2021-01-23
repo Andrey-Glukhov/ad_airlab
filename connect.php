@@ -14,15 +14,15 @@ get_header(); ?>
         <div class="form_background">
           <?php the_content(); ?>
           <div class="connect-icons">
-                        <a href="https://www.linkedin.com/company/aiforretail" target="_blank"><img src="http://192.168.1.5:8888//AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/linkedin-brands.png"/></a>
-                        <a href="https://twitter.com/AIforRetail" target="_blank"><img src="http://192.168.1.5:8888//AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/twitter-square-brands.png"></a></div>
+                        <a href="https://www.linkedin.com/company/aiforretail" target="_blank"><img src="http://192.168.1.5:8888/AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/linkedin-brands.png"/></a>
+                        <a href="https://twitter.com/AIforRetail" target="_blank"><img src="http://192.168.1.5:8888/AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/twitter-square-brands.png"></a></div>
           <div class="search_name"><p>@AIRLAB</p></div>
         </div>
         <?php endwhile; ?>
         <?php endif; ?>
       </div>
-      <div class="col-md-6 col-ms-11 col-10 map">
-        <img src="http://192.168.1.5:8888//AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/connect_illustration-01.png" />
+      <div class="col-md-7 col-ms-11 col-10 map">
+        <img src="http://192.168.1.5:8888/AD_AIRLab/wordpress/wp-content/uploads/2021/01/holland_city_icons-01.png" />
 
       </div>
 

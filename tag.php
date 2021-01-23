@@ -1,7 +1,5 @@
 <?php
-/**
-*Template Name: Research Papers Template
-*/
+
 get_header(); ?>
 
 <div class="container-fluid">
@@ -9,7 +7,17 @@ get_header(); ?>
     <div class="col-lg-4 col-md-7 col-sm-10 col-12 papers_slide order-sm-1 order-3">
       <h1><span>Research Papers</span><br><span class="t_bold">& Talks</span></h1>
       <?php
-      $about_papers = new WP_Query( array( 'page_id' => 33 ));
+	  global $query_string;
+	  $q_string=''; 
+	  $q_array = explode("&", $query_string);
+	 
+	  foreach($q_array as $q_part) {
+		  if (strpos($q_part,'tag=') !== false) {
+			list($q_string) = sscanf($q_part, "tag=%s");
+			break;
+		  }
+	  }
+	  $about_papers = new WP_Query( array( 'page_id' => 33 ));
       if ( $about_papers->have_posts() ) : while ( $about_papers->have_posts() ) : $about_papers->the_post();
       ?>
       <div class="papers_section"><?php the_content(); ?></div>
@@ -43,12 +51,15 @@ get_header(); ?>
       <button class="back" onclick="window.location.href='http://192.168.1.5:8888//AD_AIRLab/wordpress/what/';">Back</button>
     </div>
     <?php $args = array(
-      'post_type' => 'papers_and_talks',
+	  'post_type' => 'papers_and_talks',
       'post_status' => 'publish',
       'order' => 'ASC',
       'posts_per_page' => -1,
-    );
-    $r_paper = new WP_Query( $args );
+	);
+	if ($q_string) {
+		$args['tag'] = $q_string; 
+	}
+	$r_paper = new WP_Query( $args );
     $row_count =0;
     if($r_paper->have_posts() ) : while ( $r_paper->have_posts() ) : $r_paper->the_post();
     $category = get_the_category();

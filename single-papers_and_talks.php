@@ -1,8 +1,13 @@
 <?php get_header();
 if (have_posts()) : while ( have_posts() ) : the_post();
 $category = get_the_category();
-$posttags = get_the_tags();?>
-
+$posttags = get_the_tags();
+if (has_category('publications')) {
+  echo '<div class="publications"></div>';
+} elseif (has_category('parers')) { 
+  echo '<div class="papers"></div>';
+}
+?>
 <div class="container-fluid abstract_container">
   <div class="row justify-content-center">
     <div class="col-lg-10 col-md-11 back_button">
@@ -25,7 +30,8 @@ $posttags = get_the_tags();?>
     </div>
     <div class="col-1 d-none d-sm-none d-md-none d-lg-block"></div>
     <div class="col-lg-6 col-md-8 col-sm-10">
-      <div class="abstract_content">
+     <?php if (has_category('publications')) { ?> 
+    <div class="abstract_content">
         <div class="abstract_wrapper">
           <h1>Abstract</h1>
           <?php the_content(); ?>
@@ -37,6 +43,10 @@ $posttags = get_the_tags();?>
         }
       }?>
     </ul>
+    <?php } elseif (has_category('talks')){
+      the_content();
+    }
+    ?>
     </div>
   </div>
 

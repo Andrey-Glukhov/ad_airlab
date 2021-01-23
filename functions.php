@@ -2,6 +2,8 @@
 function airlab_script_enqueue(){
 //css
 	wp_enqueue_style( 'airlab-stylesheet', get_template_directory_uri() . '/css/airlab.css', array(), '1.0.0', 'all' );
+	wp_enqueue_style( 'js-scroll-stylesheet', get_template_directory_uri() . '/css/jquery.mCustomScrollbar.css', array(), '1.0.0', 'all' );
+	
   //js
   // unregister jQuery
   wp_deregister_script('jquery-core');
@@ -24,9 +26,9 @@ function airlab_script_enqueue(){
 
 	//Typed.js
 	wp_enqueue_script( 'typed-js', 'https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js');
-
-
-  wp_enqueue_script( 'airlab-js', get_template_directory_uri() . '/js/airlab.js', array('jquery', 'scroll-magic-js', 'gsap-js', 'typed-js', 'bootstrap-js'), null, true );
+	wp_enqueue_script( 'js-scroll-js', get_template_directory_uri() . '/js/jquery.mCustomScrollbar.concat.min.js', array('jquery'), null, true );
+	
+  wp_enqueue_script( 'airlab-js', get_template_directory_uri() . '/js/airlab.js', array('jquery', 'scroll-magic-js', 'gsap-js', 'typed-js', 'bootstrap-js', 'js-scroll-js'), null, true );
 
 
 }
@@ -88,6 +90,22 @@ function showhide_shortcode( $atts, $content = null ) {
 	$output .= '<div id="' . $attributes['type'] . '-link-hide' . $post_id . '" class="sh-link ' . $attributes['type'] . '-link ' . $hidden_class .'"><a href="#" onclick="showhide_hide(\'' . esc_js( $attributes['type'] ) . '\', ' . $post_id . '); return false;" aria-expanded="' . $hidden_aria_expanded .'"><span id="' . $attributes['type'] . '-toggle-hide' . $post_id . '">' . $less_text . '</span></a></div></div>';
 	return $output;
 }
+function get_terms_by_post_type ($taxo_term, $post_types ) {
+	global $wpdb;
+$query = $wpdb->prepare(
+                            "SELECT term.*, COUNT(*) from $wpdb->terms AS term
+                            INNER JOIN $wpdb->term_taxonomy AS texo ON term.term_id = texo.term_id
+                            INNER JOIN $wpdb->term_relationships AS tr ON tr.term_taxonomy_id = texo.term_taxonomy_id
+                            INNER JOIN $wpdb->posts AS post ON post.ID = tr.object_id
+                            WHERE post.post_type IN('%s') AND texo.taxonomy IN('%s')
+                            GROUP BY term.term_id",
+                            join( "', '", $post_types ),
+                            join( "', '", $taxo_term)
+                        );
 
+$results = $wpdb->get_results( $query );
+return $results;
+
+}	
 
 ?>
