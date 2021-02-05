@@ -5,20 +5,28 @@
 get_header(); ?>
 
 <div class="container_fluid">
-  <div class="row paper_wrapper justify-content-between">
+  <div class="row paper_wrapper justify-content-between research_page">
     <div class="col-lg-4 col-md-5 col-sm-10 col-12 papers_slide">
-      <h1><span>Meet Researchers</span><br><span class="t_bold">& Staff.</span></h1>
+      <h1><span class="t_bold">Meet Researchers</span><br><span class="t_bold">& Staff.</span></h1>
     </div>
+	  <div class="col-md-4 col-sm-10 col-12 checkbox_wraper">
+		  <div class="checkbox_container">
+			<label for="check_amsterdam"><img class="ams_gerb" src="https://aiforretail.ai/wp-content/uploads/2021/01/AirlabAdamDelft-01.png"/>A'dam
+			<input type="checkbox" class="custom-checkbox" id="check_amsterdam" name="chek_tag" checked>
+			<span class="checkmark"></span>
+			 </label>
+			  
+			<label for="check_delft"><img class="ams_gerb" src="https://aiforretail.ai/wp-content/uploads/2021/01/AirlabAdamDelft-02.png"/>Delft
+			<input type="checkbox" class="custom-checkbox" id="check_delft" name="chek_tag" checked>
+			  <span class="checkmark"></span>
+			</label>
+		</div>
+	  </div>
     <div class="col-sm-2 col-12 back_button_wraper">
-      <button class="back" onclick="window.location.href='http://192.168.1.5:8888//AD_AIRLab/wordpress/people/';">Back</button>
+      <button class="back" onclick="window.location.href='https://aiforretail.ai/people/';">Back</button>
     </div>
   </div>
-<div class="checkbox_container">
-<input type="checkbox" class="custom-checkbox" id="check_amsterdam" name="chek_tag" checked>
-<label for="check_amsterdam">A'dam</label>
-<input type="checkbox" class="custom-checkbox" id="check_delft" name="chek_tag" checked>
-<label for="check_delft">Delft</label>  
-</div>
+
 
 
     <?php $args = array(
@@ -98,7 +106,5 @@ get_header(); ?>
     endwhile; ?>
   <?php endif; ?>
 </div>
-</div>
-
 
 <?php get_footer(); ?>

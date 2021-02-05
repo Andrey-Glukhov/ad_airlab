@@ -8,10 +8,6 @@ get_header(); ?>
       <div id="typed-strings">
       			<p>Why Scientific R&D for<br>Ahold Delhaize?</p>
       </div>
-      <div class="col-12" id="typed-strings">
-            <span class = "animated_sentence" id="typed"></span>
-      </div>
-
 
       </div>
       <div class="row">
@@ -33,15 +29,4 @@ get_header(); ?>
 </div>
 <?php get_footer(); ?>
 
-<script>
-var typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
-	smartBackspace: true ,
-	typeSpeed: 70,
-	 backSpeed: 30,
-	loop: true,
-  loopCount: Infinity,
-	showCursor: false,
-  });
 
-</script>

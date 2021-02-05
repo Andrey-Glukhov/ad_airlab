@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md">
-  <a class="navbar-brand" href="http://192.168.1.5:8888//AD_AIRLab/wordpress/"><img src="http://192.168.1.5:8888//AD_AIRLab/wordpress/wp-content/themes/ad_airlab/img/AirlabLogo-01.png"/></a>
+  <a class="navbar-brand" href="http://aiforretail.ai/"><img src="http://aiforretail.ai/wp-content/themes/ad_airlab/img/AirlabLogo-01.png"/></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
     <div class="animated-icon1"><span></span><span></span><span></span></div>
   </button>

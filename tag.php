@@ -33,7 +33,7 @@ get_header(); ?>
   </li>
       <?php  } ?>
 	  <li class="tag_item" data-tag="all_tags">
-      <a href="http://192.168.1.5:8888//AD_AIRLab/wordpress/research-papers-talks/">
+      <a href="https://aiforretail.ai/research-papers-talks/">
       All
       </a>
   </li>

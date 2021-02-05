@@ -2,7 +2,7 @@
 function airlab_script_enqueue(){
 //css
 	wp_enqueue_style( 'airlab-stylesheet', get_template_directory_uri() . '/css/airlab.css', array(), '1.0.0', 'all' );
-	wp_enqueue_style( 'js-scroll-stylesheet', get_template_directory_uri() . '/css/jquery.mCustomScrollbar.css', array(), '1.0.0', 'all' );
+	//wp_enqueue_style( 'js-scroll-stylesheet', get_template_directory_uri() . '/css/perfect-scrollbar.css', array(), '1.0.0', 'all' );
 	
   //js
   // unregister jQuery
@@ -26,9 +26,10 @@ function airlab_script_enqueue(){
 
 	//Typed.js
 	wp_enqueue_script( 'typed-js', 'https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js');
-	wp_enqueue_script( 'js-scroll-js', get_template_directory_uri() . '/js/jquery.mCustomScrollbar.concat.min.js', array('jquery'), null, true );
+	//wp_enqueue_script( 'js-scroll-js', get_template_directory_uri() . '/js/perfect-scrollbar.js', array('jquery'), null, true );
+	wp_enqueue_script( 'js-mousewheel-js', get_template_directory_uri() . '/js/jquery.mousewheel.min.js', array('jquery'), null, true );
 	
-  wp_enqueue_script( 'airlab-js', get_template_directory_uri() . '/js/airlab.js', array('jquery', 'scroll-magic-js', 'gsap-js', 'typed-js', 'bootstrap-js', 'js-scroll-js'), null, true );
+  wp_enqueue_script( 'airlab-js', get_template_directory_uri() . '/js/airlab.js', array('jquery', 'scroll-magic-js', 'gsap-js', 'typed-js', 'bootstrap-js', 'js-mousewheel-js'), null, true );
 
 
 }
